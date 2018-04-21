@@ -1,0 +1,13 @@
+baseurl = "/"
+languageCode = "en-us"
+languageLang = "en"
+title = "Yet another blog!"
+theme=tranquilpeak
+[params]
+  dateFormat = "2 January 2006"
+ 
+
+# RSS, categories and tags disabled for an easy start
+# See configuration options for more details: 
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
