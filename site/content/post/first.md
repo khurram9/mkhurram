@@ -46,9 +46,9 @@ The very first step is to note down a wish list of features or goals that you wo
 I previously hosted this blog on [DigitalOcean](digitalocean.com) ($5 droplet; dirtcheap and supercool service which is easy to manage and have plathora of guides available on almost all the applications that you potetially can have for an online hosting/infrastructure provider). As I'll have my own (virtual) machine I could potentially configure it for *CI/CD thing* and for any other feature that I want to have for this blog. But this time I happend to find [netlify](netlify.com), "an all-in-one platform for automating modern web projects" and I was impressed with their offering; a CDN based hosting with CD and a free (one-click-setup) HTTPS certificate at $0. What does a blind person want?
 
 
-### Toolset?
+### What backend to use for this project?
 Given that the a big chunk of setup issues (Hosting, Security, CD, CDN and $) were auto-sorted by choosing Netlify there only remained a couple of questions to answer before proceeding to the actual setup. 
-#### What backend to use for this project?
+
 This was also a rather easy choice. In previous iteration I had used Hexo blog and it was a good choice. This time I wanted to experiment with Go so HUGO, a close cousin of HEXO, was an easier option.
 
 
