@@ -16,7 +16,7 @@ Given that there are great manged services availabe in the form of [Medium](medi
 
 Well, as always my answer to future Khurram is: I *just* want to do it. Any problem? 
 
-Back to the ral question of why buying (and in this case nurturing may be a better word) a cow when you can jsut the milk from market (and that is free too!)? and the answer is I am a CS grad and I should know this stuff or more appropriately this is a *fun* distraction and (hopfully) will be worth the effort.
+Back to the real question of why buying (and in this case nurturing may be a better word) a cow when you can jsut the milk from market (and that is free too!)? and the answer is I am a CS grad and I should know this stuff or more appropriately this is a *fun* distraction and (hopfully) will be worth the effort.
 
 Now tht this debate between two versions of inner self is settled (or not, who cares!) lets move to the real part. how will you set-up the blog?
 
