@@ -132,14 +132,21 @@ added 2465 packages in 180.065s
 
 
 # Step 3: Running the server on local machine
+Now that NODE webserver and HUGO backend has been installed in your local machine, now its time to start the webserver and HUGO backend and see the blog in our web-browser. SO first lets start the webserver service.
 ```
 $ npm start
+```
+Techincally HUGO backend should also have been installed after second last step we did. If it hadn't then you can alos use homebrew to install it. Try to type `$ hug` and then press `TAB` key and see if it auto-completes or some options are displayed in the terminal, If not then run the following command to install HUGO backend. (I forgot how I did it)
+```
 $ brew install hugo
+```
+Now lets create some (dummy) pages so that our webservice has something to display. 
+```
 $ cd site
 $ hugo new aboutme.md
 $ hugo new post site/content/first.md
 ```
-
+Till this point our blog is setup (atleast on our own machine). To test it open a browser window and go to following address `127.0.0.1:1313`. You should be able to see a post with title `First`.
 
 # Step 4: Installing Theme
 Download theme from [HUGO TranquilPeak Github Page](https://github.com/kakawait/hugo-tranquilpeak-theme) as **ZIP** create new folder under site/themes and move the downloaded folder into it. Rename hugo-tranquilpeak-theme-master to hugo-tranquilpeak-theme.
