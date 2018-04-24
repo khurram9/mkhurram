@@ -7,6 +7,8 @@ showSocial: false
 keywords: hugo, blog, tranquilpeak, netlify
 ---
 
+<!--more-->
+
 <!-- toc -->
 
 # Why hosting your own blog?
@@ -146,22 +148,63 @@ $ cd site
 $ hugo new aboutme.md
 $ hugo new post site/content/first.md
 ```
-Till this point our blog is setup (atleast on our own machine). To test it open a browser window and go to following address `127.0.0.1:1313`. You should be able to see a post with title `First`.
+Till this point our blog is setup (atleast on our own machine). To test it open a browser window and go to following address `127.0.0.1:3000`. You should be able to see a post with title `First`.
 
-# Step 4: Installing Theme
-Download theme from [HUGO TranquilPeak Github Page](https://github.com/kakawait/hugo-tranquilpeak-theme) as **ZIP** create new folder under site/themes and move the downloaded folder into it. Rename hugo-tranquilpeak-theme-master to hugo-tranquilpeak-theme.
-
-
-# Step 5
-Final setup.
+# Step 4: Installing the Theme
+Download theme from [HUGO TranquilPeak Github Page](https://github.com/kakawait/hugo-tranquilpeak-theme) as **ZIP**, extract the **zip** file and remove the last *-master* from the extracted folder name. Then create a new folder under site/themes in your *vector-hugo* directory and move the downloaded folder into it.
 
 
-# Step 6: Push to Github
-Final setup.
+> To avoid conflicts with the theme, we are going to delete some of the initial boilerplate files, please delete all the files within the layouts directory at site/layouts. Another conflicting file is src/css/main.css - delete this file too. Then we must copy the contents of the example config.toml file from themes/hugo-strata-theme to our site’s config.toml file located at hugo/site. *NOTE: Be sure to update the baseurl variable in the config file to a relative path like below. `baseurl = "/"`* [source](https://www.netlify.com/blog/2016/09/21/a-step-by-step-guide-victor-hugo-on-netlify/).
 
-# Step 7: Deploying on Netlify
-Final setup.
+Here you can also change the settings of your theme e.g. color and font layouts or any customization that you want.
+
+By this point your blog should be up and running and you should be able to check it by visiting [localhost:3000](localhost:3000)
 
 
-“Peace of mind produces right values, right values produce right thoughts. Right thoughts produce right actions and right actions produce work which will be a material reflection for others to see of the serenity at the center of it all.”
+# Step 5: Push to Github
+Now that the blog is setup lets add some version control to it as well as integrate it with Netlify's Continous Deployment and hosting service.
+First create a free account account on [github](github.com) if you do not already have one. Keep in mind that in free account all the repositories are public aka anyone in the world can view it.
+Initialize an empty repository on github using the in-browser gui prompts and copy the *git* link of this repository. 
+Now move back to the directory where you cloned vector-hugo and delete the *.git* folder (it is a hidden directory. You can use this `rm -rf .git` command to delete it). Now lets push this directory to the github using following commands:
+```
+$ cd /path/to/vector-hugo
+$ rm -rf .git 
+$ git init
+$ touch archetypes/.gitkeep content/.gitkeep layouts/.gitkeep static/.gitkeep data/.gitkeep
+$ git add .
+$ git commit -m "First commit"
+$ git remote add origin PASTE_THE_GIT_LINK_YOU_COPIED_AFTER_CREATING_GIT_REPOSITORY
+$ git remote -v 
+	OUTPUT SHOULD BE SAME LINK THAT YOU COPIED FROM GITHUB PAGE THAT YOU CREATED EARLIER
+
+$ git push origin master
+```
+if you encounter authentication issues after the last command then follow instructions on [this](https://help.github.com/articles/connecting-to-github-with-ssh/) page to add your username and certificate so that you can access github repository from your terminal.
+
+If everything goes as planned then your local *victor-hugo* repository should be synched to the github by now and you should be able to see it in your github account in the browser page. Now lets move the final deployment to Netlify step.
+
+# Step 6: Deploying on Netlify
+First of all singup for a free account on [Netlify](https://app.netlify.com/signup?_ga=2.90312914.935288091.1524599943-1075354642.1524344351). After singing up add a new project; follow the prompts, add your domain name, github repository address, link your github with netlify etc. By the end of this process Netlify will download your website from your github repostory and will deploy it on its servers and you should be able to access it globally using the domain name that you provided to Netlify during the setup preocess.
+
+# Step 7: Updating/Adding a blogpost
+Now that your blog is public, to add or edit the post go to the *victor/hugo/directory/site/content/post/* and open the *First.md* using sublime or any other text editor. Edit the post and then commit these changes. After successful commit the Netlify will auto update your public webpage and changes should be visible. To add new post use the `hugo new post site/content/filename.md` command. 
+
+
+# References
+1. [Ghost blog github page](https://github.com/TryGhost/Marketplace)
+2. [A GO based blog which supports Ghost themes](https://kabukky.github.io/journey/)
+3. [Setting up Ghost on Github Pages](https://www.codementor.io/montem/setup-github-pages-with-ghost-b59xbg2ya)
+4. [Official webpage of Ghost Blog](https://ghost.org)
+5. [Hexo Blog](https://hexo.io)
+6. [Original version of TranquilPeak theme for Hexo](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak)
+7. [HUGO: Go based static site generator](https://gohugo.io)
+8. [Netlify Signup page](https://app.netlify.com/signup/email?next=true)
+9. [Hugo port of original Hexo based TranquilPeak theme](https://github.com/kakawait/hugo-tranquilpeak-theme)
+10. [Hugo TranquilPeak issue. I faced same issue and the comments helped.](https://github.com/kakawait/hugo-tranquilpeak-theme/issues/256)
+11. [From ghost to Hugo and Netlify. This is an interesting blog.](https://www.guitmz.com/from-ghost-to-hugo-netlify/)
+12. [A medium blog on Hugo and Netlify setup](https://medium.com/@Nicc128/going-live-in-two-hours-with-hugo-and-netlify-47e5c741dba6)
+13. [A step by step guide to setup the Hugo and Netlify](https://www.netlify.com/blog/2016/09/21/a-step-by-step-guide-victor-hugo-on-netlify/)
+14. [Hugo Boilerplate from Netlify](https://github.com/netlify/victor-hugo)
+
+> “Peace of mind produces right values, right values produce right thoughts. Right thoughts produce right actions and right actions produce work which will be a material reflection for others to see of the serenity at the center of it all.”
 ― Robert M. Pirsig, Zen and the Art of Motorcycle Maintenance
