@@ -205,6 +205,8 @@ Now that your blog is public, to add or edit the post go to the *victor/hugo/dir
 12. [A medium blog on Hugo and Netlify setup](https://medium.com/@Nicc128/going-live-in-two-hours-with-hugo-and-netlify-47e5c741dba6)
 13. [A step by step guide to setup the Hugo and Netlify](https://www.netlify.com/blog/2016/09/21/a-step-by-step-guide-victor-hugo-on-netlify/)
 14. [Hugo Boilerplate from Netlify](https://github.com/netlify/victor-hugo)
+15. [TranquilPeak Theme User Documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md#change-code-coloration-highlightjs-theme)
+16. [Official page of TranquilPeak port from Hexo to Hugo](https://themes.gohugo.io/theme/hugo-tranquilpeak-theme/2015/06/welcome-to-tranquilpeak-0.4.3-beta/)
 
 > “Peace of mind produces right values, right values produce right thoughts. Right thoughts produce right actions and right actions produce work which will be a material reflection for others to see of the serenity at the center of it all.”
 ― Robert M. Pirsig, Zen and the Art of Motorcycle Maintenance
