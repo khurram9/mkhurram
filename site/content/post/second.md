@@ -1,7 +1,7 @@
 ---
 title: "Second"
 date: 2018-05-04T22:47:33+05:00
-draft: true
+draft: false
 ---
 
 # Introduction to Databases
