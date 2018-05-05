@@ -337,6 +337,8 @@ If a transaction hasn't really propagated thoughout the whole system, there must
 27. [Spanner: Google’s Globally Distributed Database](http://delivery.acm.org/10.1145/2500000/2491245/a8-corbett.pdf?ip=110.93.234.9&id=2491245&acc=OA&key=55CAB23EF39677E3%2EFE8F10057D3A2BA3%2E4D4702B0C3E38B35%2E3ABADC0B30E26CFA&__acm__=1525543322_79367b046ecb1c6864624e977b54845d)
 28. [The nature of data center traffic: measurements & analysis](http://delivery.acm.org/10.1145/1650000/1644918/p202-kandula.pdf?ip=110.93.234.9&id=1644918&acc=ACTIVE%20SERVICE&key=55CAB23EF39677E3%2EFE8F10057D3A2BA3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1525543349_7fa39ce204a847991185e921a678a712)
 29. [Google’s MapReduce programming model — Revisited](https://ac.els-cdn.com/S0167642307001281/1-s2.0-S0167642307001281-main.pdf?_tid=ab2e04e2-479e-4df9-88fc-eef2262fe579&acdnat=1525543338_f9f79081c8ea7333f649c4a4563f898d)
+30. [CS 162 Lecture 18 Slides](https://inst.eecs.berkeley.edu/~cs162/fa13/Lectures/lec18-TCP-transactionsx4.pdf)
+31. [CS 162 Lecture 19 Slides](https://inst.eecs.berkeley.edu/~cs162/fa13/Lectures/lec19-transactions-2PCx4.pdf)
 
 
 
