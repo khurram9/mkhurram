@@ -1,3 +1,4 @@
+
 ---
 title: "Second"
 date: 2018-05-04T22:47:33+05:00
@@ -8,12 +9,96 @@ draft: false
 These notes are inspired from the [Lecture 18](https://www.youtube.com/watch?v=Pk1E3Iod7eQ&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM&index=17) and [Lecture 19](https://www.youtube.com/watch?v=DRGr3tFtHiQ&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM&index=18) of UC Berkely's CS162 Operating System course along with some additional resources from internet. I'll try to provide (collect) all references at the end of this post. This post is intended as *scratch pad* for my future self and may not help anyone else much; though the lecture video I linked earlier should definitely help you if you are looking for a Databases Introduction.
 
 ## What is a database?
-First of all, database is a collection of **code** files i.e. codeing and databases are not two distinct concepts (to my younger self). Informally, a database can be described as a collection of code files that provide an interface to interact with data quickly and reliably i.e. instead of replicating (and managing) data-handling code in your program, you can call a library to handle (store, retrieve, retrieve-a-special-subset-of-data; aka a query) data related operations for you. That imported library will provide an interface (higher level calling semantics; function calls etc) to do the operations.
+First of all, database is a collection of **code** files i.e. coding and databases are not two distinct concepts (to my younger self). Informally, a database can be described as a collection of code files that provide an interface to interact with data quickly and reliably i.e. instead of replicating (and managing) data-handling code in your program, you can call a library to handle (store, retrieve, retrieve-a-special-subset-of-data; aka a query) data related operations for you. That imported library will provide an interface (higher level calling semantics; function calls etc) to do the operations.
 
-Formally, [John Canny](https://www2.eecs.berkeley.edu/Faculty/Homepages/canny.html) in his lecture has defined Databases as follwoing:
+Formally, [John Canny](https://www2.eecs.berkeley.edu/Faculty/Homepages/canny.html) in his lecture has defined a Database as follwoing:
 
 > A large **integrated collection** of data which models the real world entities and (potnetially) the relationships between those entities  e.g. Entities (teams, games etc) Relationships (played-*the-game*, memebr-of-team etc)
-> For eample, Cal plays against Stanford in The Big Game.
+
+For example, {{< hl-text blue >}}Cal (an entity){{< /hl-text >}} {{< hl-text red >}}plays against (a relationship){{< /hl-text >}} {{< hl-text blue >}}Stanford (another entity){{< /hl-text >}} {{< hl-text red >}}in (another relationship){{< /hl-text >}} {{< hl-text blue >}}The Big Game (yet another entity){{< /hl-text >}}.
+
+
+## How different organizations are using databases?
+
+Organization|DB Size                    | Usage |Desing Constraints       | Keywords | Recommended DB types
+------------|---------------------------|-------|-------------------------|----------|---------------------
+Yahoo       |`700 TB`                   | matching advertisers with users/consumers |higly available; millions of active users at any given time; service (ad) should be provided, accuracy/quality is secondary | Timeliness, Availability | BASE 
+AT&T        |`330 TB`            | managing users data, bills, usage etc. Should a user be allowed to make the call or should be routed to "insufficient balance" message |a user should not be charged for what he/she didn't consume and at the same time should be charged for each text message or internet MB he/she consumed. A (wireless) client can change it's location, can fly to another city or even another country.| Accuracy, Consistency, Durability| ACID 
+Austrailian Bureaue of Statistics|`250 TB`| |many queries with big results e.g. how many people are ther in Melbourne region who are younger than 25 years, have a graduate degree and work in Tech secotr. Ability to go through TBs of data in short amount of time. | Fast, Rich Queries| OLAP, ROLAP 
+
+
+## What is "structured data"?
+A {{< hl-text red >}}data model{{< /hl-text >}} is a collection of entities and their relationships.
+
+A {{< hl-text red >}}schema{{< /hl-text >}} is an instance of a data model. It describes the fields in the database; how the database is organized.
+
+A {{< hl-text red >}}relational database{{< /hl-text >}} is the most used {{< hl-text red >}}data model{{< /hl-text >}}. Example of  {{< hl-text red >}}relation{{< /hl-text >}} include tables with rows and columns. Every relation has a {{< hl-text red >}}schema{{< /hl-text >}} which describes the fields in the column.
+
+### Example: A university's database
+#### {{< hl-text red >}}Conceptual Schema{{< /hl-text >}}
+
+- A university has **students**
+- Some **classes** are offered by the university
+- **Students enroll in classes** 
+
+In a database all these three conceptual items will be modeled as three tables:
+
+- **Student Table** 
+`(student_id:string, name:string, email:string, age:int, gpa:float)` 
+
+- **Courses Table** 
+`(course_id:string, name:string, credit_hours:int)` 
+
+- **Enrolled Table** 
+```python
+( concatenate(course_id:string, student_id:string), gpa:float)
+ 		FOREIGN KEY student_id REFERENCES(is from) Students(table)
+ 		FOREIGN KEY course_id  REFERENCES(is from) Courses(table)
+```
+
+
+`concatenate(course_id:string, student_id:string)` in last table is calles a **Composite Key**.
+
+The last two lines in *Enrolled* table are **constraints** on the table items.
+
+#### {{< hl-text red >}}External Schema (View){{< /hl-text >}}
+A View is a virtual table which does not exist as a *real* table in DB but instead is formed as a result of queries and some data operations on the results of queries. For example if you want to create an **Enrollment** table, which is a required information in a university so that instructors and admisntrators can view (know) how many students are enrolled in different courses, it can be done by creating a *virtual table* called formally as a **View**.
+```python
+course_info(couse_id:string, enrollment:int)
+	CREATE VIEW course_info AS
+		SELECT course_id, count(*) as enrollment
+		FROM Enrolled
+		GROUP BY course_id
+```
+
+ 
+### How does `Student` table look like?
+
+student_id|name|email|age|gpa
+----------|----|-----|---|---
+12040013|Afzal|afzal@univ.edu|24|3.8
+15100364|Marry|marry@univ.edu|21|4.0
+19232974|Phillip|phillip@univ.edu|18|2.8
+
+
+
+{{< alert info >}}
+An important point to note is; in storage system (hard disk, RAM etc) the data is organized serially(linearly) i.e. `3132 3034 3030 3133 4166 7a61 6c61 667a 616c 4075 6e69 762e 6564 7532 3433 2e38 #This is the first line of example of Student's table in hexadecimal format` NOT as 2D or 3D arrays. It is the job of DBMS to decide how to store the data on storage system so that it can be accessed efficiently. It is just like a filesystem in operating systems.
+{{< /alert >}}
+
+## What is a Database Management System (DBMS)?
+> A softwre system designed to **store, manage and facilitate access** to databases.
+
+A DBMS provide:
+
+- **Data Definition Language (DDL)**
+	-- Define relations, schema
+
+- **Data Manipulation Langugage (DML)**
+	-- Queries to retrieve, analyze and modify data
+
+- **Guarantees** (or no guarantee) about *durability, concurrency, semantics* etc
+
 
 # Welcome to StackEdit!
 
