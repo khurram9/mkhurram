@@ -7,6 +7,7 @@ comments: false
 showSocial: false
 keywords: databases, sql, introduction
 ---
+<!--more-->
 <!--toc-->
 
 These notes are inspired from the [Lecture 18](https://www.youtube.com/watch?v=Pk1E3Iod7eQ&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM&index=17) and [Lecture 19](https://www.youtube.com/watch?v=DRGr3tFtHiQ&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM&index=18) of UC Berkely's CS162 Operating System course along with some additional resources from internet. I'll try to provide (collect) all references at the end of this post. This post is intended as *scratch pad* for my future self and may not help anyone else much; though the lecture video I linked earlier should definitely help you if you are looking for a Databases Introduction.
