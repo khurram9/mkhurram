@@ -3,6 +3,9 @@
 title: "Introduction to Databases"
 date: 2018-05-04T22:47:33+05:00
 draft: false
+comments: false
+showSocial: false
+keywords: databases, sql, introduction
 ---
 <!--toc-->
 
