@@ -316,7 +316,27 @@ If a transaction hasn't really propagated thoughout the whole system, there must
 8. [Message Idempotence](http://shuttle.github.io/shuttle-esb/concepts-idempotence/)
 9. [Ontology of different Programming Constructs](https://paulhammant.com/2018/01/31/ontology-component-vs-class-vs-object-vs-service-vs-application-vs-process-vs-library-etc/)
 10. [Paul Hammant Sys. Arch. blog](https://paulhammant.com)
-
+11. [Graph Databases](https://www.youtube.com/watch?v=GekQqFZm7mA)
+12. [Concurrency in Python](https://blog.gevent.org)
+13. [Google File System](https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf)
+14. [Map Reduce: simplified dataprocessing on large clusters](https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf)
+15. [Another resource for MapReduce](https://www.usenix.org/legacy/publications/library/proceedings/osdi04/tech/full_papers/dean/dean_html/)
+16. [Bigtable: A Distributed Storage System for Structured Data
+](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
+17. [Dynamo: Amazon’s Highly Available Key-value Store](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf)
+18. [Principles of distributed database systems](https://books.google.com.pk/books?hl=en&lr=&id=TOBaLQMuNV4C&oi=fnd&pg=PR3&ots=LrzlfF-SZc&sig=wCMA5BZbjy7Nm9bnDmtON3sPekY&redir_esc=y#v=onepage&q&f=false)
+19. [Hadoop: A distributed filesystem](http://www.alexanderpokluda.ca/coursework/cs848/CS848%20Paper%20Presentation%20-%20Alexander%20Pokluda.pdf)
+20. [Spark: Cluster Computing with Working Sets](http://static.usenix.org/legacy/events/hotcloud10/tech/full_papers/Zaharia.pdf)
+21. [Cloud computing: state-of-the-art and research challenges](https://link.springer.com/content/pdf/10.1007%2Fs13174-010-0007-6.pdf)
+22. [A Scalable, Commodity Data Center Network Architecture
+](http://delivery.acm.org/10.1145/1410000/1402967/p63-al-fares.pdf?ip=110.93.234.9&id=1402967&acc=PUBLIC&key=55CAB23EF39677E3%2EFE8F10057D3A2BA3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1525542928_ffcb645e0ef844a6b4facda9757a2bd6)
+23. [Cassandra - A Decentralized Structured Storage System](http://delivery.acm.org/10.1145/1780000/1773922/p35-lakshman.pdf?ip=110.93.234.9&id=1773922&acc=ACTIVE%20SERVICE&key=55CAB23EF39677E3%2EFE8F10057D3A2BA3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1525542969_6d065cfdb907fbb8f4b155c50040e63d)
+24. [The Data center as a computer](https://www.morganclaypool.com/doi/pdf/10.2200/S00516ED2V01Y201306CAC024)
+25. [Another link for data center as a computer](https://www.morganclaypool.com/doi/pdfplus/10.2200/S00516ED2V01Y201306CAC024)
+26. [Big Data: A Survey](https://link.springer.com/content/pdf/10.1007%2Fs11036-013-0489-0.pdf)
+27. [Spanner: Google’s Globally Distributed Database](http://delivery.acm.org/10.1145/2500000/2491245/a8-corbett.pdf?ip=110.93.234.9&id=2491245&acc=OA&key=55CAB23EF39677E3%2EFE8F10057D3A2BA3%2E4D4702B0C3E38B35%2E3ABADC0B30E26CFA&__acm__=1525543322_79367b046ecb1c6864624e977b54845d)
+28. [The nature of data center traffic: measurements & analysis](http://delivery.acm.org/10.1145/1650000/1644918/p202-kandula.pdf?ip=110.93.234.9&id=1644918&acc=ACTIVE%20SERVICE&key=55CAB23EF39677E3%2EFE8F10057D3A2BA3%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35&__acm__=1525543349_7fa39ce204a847991185e921a678a712)
+29. [Google’s MapReduce programming model — Revisited](https://ac.els-cdn.com/S0167642307001281/1-s2.0-S0167642307001281-main.pdf?_tid=ab2e04e2-479e-4df9-88fc-eef2262fe579&acdnat=1525543338_f9f79081c8ea7333f649c4a4563f898d)
 
 
 
