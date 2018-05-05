@@ -309,7 +309,13 @@ If a transaction hasn't really propagated thoughout the whole system, there must
 1. [ACM document explaining ACID vs BASE system](http://delivery.acm.org/10.1145/1400000/1394128/p48-pritchett.pdf?ip=110.93.234.9&id=1394128&acc=OPEN&key=55CAB23EF39677E3%2EFE8F10057D3A2BA3%2E4D4702B0C3E38B35%2E6D218144511F3437&__acm__=1525539035_59726f519e86438627120c063f3ffce7)
 2. [UC Berkely Lecture#18 (Fall 2013) by John Canny](https://www.youtube.com/watch?v=Pk1E3Iod7eQ&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM&index=17)
 3. [UC Berkely Lecture#19 (Fall 2013) by John Canny](https://www.youtube.com/watch?v=DRGr3tFtHiQ&list=PLRdybCcWDFzCag9A0h1m9QYaujD0xefgM&index=18)
-4. 
+4. [ACID vs BASE](https://neo4j.com/blog/acid-vs-base-consistency-models-explained/)
+5. [Building your own DBMS](http://pages.saclay.inria.fr/ioana.manolescu/SLIDES/LernerManolescu-SBBD2003.pdf)
+6. [Understanding DB building blocks](https://www.interfacett.com/blogs/understanding-database-building-blocks-sql-server/)
+7. [CS162 Fall 2013 course page](https://inst.eecs.berkeley.edu/~cs162/fa13/)
+8. [Message Idempotence](http://shuttle.github.io/shuttle-esb/concepts-idempotence/)
+9. [Ontology of different Programming Constructs](https://paulhammant.com/2018/01/31/ontology-component-vs-class-vs-object-vs-service-vs-application-vs-process-vs-library-etc/)
+10. [Paul Hammant Sys. Arch. blog](https://paulhammant.com)
 
 
 
