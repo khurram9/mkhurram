@@ -80,7 +80,7 @@ student_id|name|email|age|gpa
 15100364|Marry|marry@univ.edu|21|4.0
 19232974|Phillip|phillip@univ.edu|18|2.8
 
-
+$$c^{2} = a^{2} + b^{2}.$$
 
 {{< alert info >}}
 An important point to note is; in storage system (hard disk, RAM etc) the data is organized serially(linearly) i.e. `3132 3034 3030 3133 4166 7a61 6c61 667a 616c 4075 6e69 762e 6564 7532 3433 2e38 #This is the first line of example of Student's table in hexadecimal format` NOT as 2D or 3D arrays. It is the job of DBMS to decide how to store the data on storage system so that it can be accessed efficiently. It is just like a filesystem in operating systems.
